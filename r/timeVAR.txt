@@ -1,0 +1,20 @@
+time <- c(146, 74, 51, 197, 203, 65, 120, 53, 35, 141, 45, 53, 107, 46, 95, 142, 84, 60, 158, 78, 102, 125, 85, 54, 117, 109, 34, 104, 157, 81, 153, 96, 63, 58, 44, 84, 112, 77, 53, 90, 77, 25, 84, 45, 59, 72, 25, 112, 184, 54, 34, 67, 42, 89, 132, 76, 50, 221, 60, 67, 218, 87, 38, 117, 51, 39, 143, 53, 53, 166, 66, 49)
+domain <- c("D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2")
+caracteristic <- c("-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR") 
+group <- c("P1", "P1", "P1", "P2", "P2", "P2", "P3", "P3", "P3", "P4", "P4", "P4", "P5", "P5", "P5", "P6", "P6", "P6", "P1", "P1", "P1", "P2", "P2", "P2", "P3", "P3", "P3", "P4", "P4", "P4", "P5", "P5", "P5", "P6", "P6", "P6","P1", "P1", "P1", "P2", "P2", "P2", "P3", "P3", "P3", "P4", "P4", "P4", "P5", "P5", "P5", "P6", "P6", "P6","P1", "P1", "P1", "P2", "P2", "P2", "P3", "P3", "P3", "P4", "P4", "P4", "P5", "P5", "P5", "P6", "P6", "P6")
+
+LS <- data.frame(group, domain, caracteristic , time)
+str(LS)
+summary(LS)
+
+LS.m1 <- tapply (time, caracteristic , mean)
+LS.m1
+
+LS.m2 <- tapply (time, domain, mean)
+LS.m2
+
+LS.av <- aov(time ~ caracteristic + group + domain)
+anova(LS.av)
+
+TukeyHSD(LS.av)
+

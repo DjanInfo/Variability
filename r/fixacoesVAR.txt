@@ -1,0 +1,20 @@
+fixation <- c(361, 133, 98, 382, 508, 96, 324, 128, 84, 306, 87, 93, 43, 92, 67, 283, 189, 88, 414, 160, 124, 375, 263, 165, 352, 326, 94, 286, 333, 109, 189, 22, 16, 169, 136, 213, 287, 213, 112, 273, 232, 72, 248, 135, 178, 221, 59, 51, 114, 65, 12, 186, 101, 238, 314, 165, 104, 546, 137, 163, 533, 247, 84, 280, 121, 87, 212, 110, 194, 377, 156, 126)
+domain <- c("D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2")
+caracteristic <- c("-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "-VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR", "+VAR") 
+group <- c("P1", "P1", "P1", "P2", "P2", "P2", "P3", "P3", "P3", "P4", "P4", "P4", "P5", "P5", "P5", "P6", "P6", "P6", "P1", "P1", "P1", "P2", "P2", "P2", "P3", "P3", "P3", "P4", "P4", "P4", "P5", "P5", "P5", "P6", "P6", "P6","P1", "P1", "P1", "P2", "P2", "P2", "P3", "P3", "P3", "P4", "P4", "P4", "P5", "P5", "P5", "P6", "P6", "P6","P1", "P1", "P1", "P2", "P2", "P2", "P3", "P3", "P3", "P4", "P4", "P4", "P5", "P5", "P5", "P6", "P6", "P6")
+
+LS <- data.frame(group, domain, caracteristic , fixation)
+str(LS)
+summary(LS)
+
+LS.m1 <- tapply (fixation, caracteristic , mean)
+LS.m1
+
+LS.m2 <- tapply (fixation, domain, mean)
+LS.m2
+
+LS.av <- aov(fixation ~ caracteristic + group + domain)
+anova(LS.av)
+
+
+

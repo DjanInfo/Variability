@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>How Does Feature Dependency Affect Configurable System Comprehensibility?</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+</head>
+
+<body class="style.css">
+
+<table width="100%" border="0">
+
+  <tr>
+
+    <td width="15%" bgcolor="#CCCCCC">&nbsp;</td>
+
+    <td><table width="100%">
+
+      <tr>
+
+        <td width="200">&nbsp;</td>
+
+        <td width="625"><h2 align="center">An experiment on how degrees of variabiity affect program comprehensibility</h2></td>
+
+        <td width="200">&nbsp;</td>
+
+      </tr>
+
+      <tr>
+
+        <td colspan="3"><h3>Author : Djan Santos, Cláudio Sant'Anna and Márcio Ribeiro</h3></td>
+
+      </tr>
+      <tr>
+        
+        <td colspan="3"><h3>Abstract :</h3></td>
+        
+      </tr>
+
+      <tr>
+
+        <td colspan="3"><table cellspacing="0" id="ec:table1" cellpadding="0">
+
+          <tbody>
+
+            <tr id="row18">
+
+              <td align="justify"><br />
+                <p>A previous study indicates that the time to find defects in configurable systems increases linearly with the increase of variability. Their study also reveals that increasing the variability does not affect the effectiveness of finding defects. Despite an important contribution, their study did not control the number of dependent variables either the number of uses of dependent variables. It is necessary to understand more clearly how degrees of variability affect program comprehension controlling factors that influence in the comprehensibility of source code of configurable systems like feature expressions, feature constant and dependent variables. Thus, we investigated how the comprehensibility of configurable systems were affected by degrees of variability taking into account dependent variables, feature expressions and feature constant. For that, we executed a controlled experiment with 12 participants who analyzed programs trying to specify the output. We also quantified comprehensibility using metrics based on time and tentative to answer tasks correctly, participants’ visual effort and participants' heart rate. Our results show that the degree of variability did not affect the comprehensibility of programs with feature dependency.</p></td>
+
+            </tr>
+
+          </tbody>
+
+        </table></td>
+
+      </tr>
+
+      <tr>
+
+        <td colspan="3">&nbsp;</td>
+
+      </tr>
+
+      <tr>
+
+        <td colspan="3">
+
+          <strong>Procedure:</strong>
+
+          <p>1 -  we cleaned all material and equipment with alcohol gel and asked the participant to fill out a consent form; <br />
+2 - the participant put on the smartwatch;<br />
+3 - calibrate  eye-tracking and smartwatch devices;<br />
+4 -  we asked her or him to watch a two minute full-screen video of a fish swimming in an aquarium; <br />
+5 -   perform the task in order based in Latin square group; </p></td>
+
+      </tr>
+
+      <tr>
+        
+        <td colspan="3">&nbsp;</td>
+        
+      </tr>
+
+      <tr>
+        
+        <td colspan="3"><table width="100%" border="1">
+          
+          <tr>
+            <td colspan="3"><h4 align="center">SOURCE CODE OF PROGRAMS</h4></td>
+            </tr>
+          <tr>
+            <td width="40%"><p><em>Latin Square 2 x2:</em></p></td>
+            
+            <td width="29%"><h5>Domain 1: sale of products </h5></td>
+            
+            <td width="31%"><h5>Domains 2: game of hit the target</h5></td>
+            
+            </tr>
+          
+          <tr>
+            
+            <td><strong>Developer 1</strong></td>
+            
+            <td><a href="images/product2.png" target="_blank">+VAR (More Variability)</a></td>
+            
+            <td><a href="images/player1.png" target="_blank">-VAR (Less Variability)</a></td>
+            
+            </tr>
+          
+          <tr>
+            
+            <td><strong>Developer 2</strong></td>
+            
+            <td><a href="images/product1.png" target="_blank">-VAR (Less Variability)</a></td>
+            
+            <td><a href="images/player2.png" target="_blank">+VAR (More Variability)</a></td>
+            
+            </tr>
+          
+          </table></td>
+        
+      </tr>
+
+      <tr>
+
+        <td colspan="3"><table width="100%" border="0">
+          <tr>
+            <td width="40%">&nbsp;</td>
+            <td width="30%">&nbsp;</td>
+            <td width="20">&nbsp;</td>
+          </tr>
+          <tr>
+            <td colspan="3"><table width="100%" border="1" cellspacing="1">
+              <tr>
+                <td colspan="3"><h4 align="center">TASKS OF PROGRAMS</h4></td>
+              </tr>
+              <tr>
+                <td width="30%"><h3>Tasks</h3></td>
+                <td width="33%"><h3><em><strong>with</strong> more variability</em></h3></td>
+                <td width="37%"><h3><em><strong>with less</strong> variability</em></h3></td>
+              </tr>
+              <tr>
+                <td bgcolor="#DEDBD7">Domain 1 - sale of products </td>
+                <td bgcolor="#DEDBD7"><a href="tasks/taskP1.html" target="_blank">Task 1, Task 2 and Task 3</a></td>
+                <td bgcolor="#DEDBD7"><a href="tasks/taskP2.html" target="_blank">Task 1, Task 2 and Task 3</a></td>
+              </tr>
+              <tr>
+                <td>Domain 2 -    game of hit the target</td>
+                <td><a href="tasks/taskP3.html" target="_blank">Task 1, Task 2 and Task 3</a></td>
+                <td><a href="tasks/taskP4.html" target="_blank">Task 1, Task 2 and Task 3</a></td>
+              </tr>
+            </table></td>
+            </tr>
+
+          </table></td>
+
+      </tr>
+
+      <tr>
+
+        <td colspan="3"><table width="100%" border="1">
+
+          <tr>
+
+            <td width="63%" align="center"><h3>Quantitative collected data </h3></td>
+
+            <td width="37%" align="center"><h3>Script R</h3></td>
+
+            </tr>
+
+          <tr>
+
+            <td><a href="r/time.txt" target="_blank">Indiviual time to specify the output</a> <br />
+
+            <td><a href="r/timeVAR.txt" target="_blank">Time.R</a><a href="image/heat_global.jpg" target="_blank"></a></td>
+
+            </tr>
+
+          <tr>
+
+            <td>Correctly specify the output<br />
+
+              <a href="r/correctly.R" target="_blank"></a></td>
+
+            <td><a href="r/acertosVAR.txt" target="_blank">Correctly.R</a></td>
+
+            </tr>
+
+          <tr>
+
+            <td><a href="r/fixacoes.txr" target="_blank">Individual number of fixations </a><br />
+
+              <a href="r/fixations.R" target="_blank"></a></td>
+
+            <td><a href="r/fixacoesVAR.txt" target="_blank">Fixations.R</a><a href="image/heat_inter.jpg" target="_blank"></a></td>
+
+            </tr>
+          <tr>
+            <td>number of HRV</td>
+            <td><a href="r/hrvVAR.txt" target="_blank">HRV.r</a></td>
+            </tr>
+
+        </table></td>
+
+      </tr>
+
+      <tr>
+
+        <td colspan="3"><table width="100%" cellspacing="1">
+
+          <tr>
+
+            <td width="33"><table width="100%" cellspacing="1">
+              <tr>
+                <td width="33"><table width="100%" border="1">
+                  <tr>
+                    <td colspan="2"><h4 align="center">AOI OF PROGRAMS<span role="presentation" dir="ltr"></span></h4></td>
+                  </tr>
+                  <tr>
+                    <td width="50%"><h5>Domain 1: sale of products</h5></td>
+                    <td width="50%"><h5>Domains 2: game of hit the target</h5></td>
+                  </tr>
+                  <tr>
+                    <td><a href="images/study4AOIDomain1.png" target="_blank">Program 1 and Program 2</a></td>
+                    <td><a href="images/study4AOIDomain2.png" target="_blank">Program 3 and Program 4</a></td>
+                  </tr>
+                </table></td>
+              </tr>
+            </table></td>
+
+            </tr>
+          <tr>
+            <td><table width="100%" border="1">
+              <tr>
+                <td colspan="2"><h4 align="center">PROGRAMS <span role="presentation" dir="ltr">HIGHLIGHTING DEGREES OF VARIABILITY</span><span role="presentation" dir="ltr"></span></h4></td>
+              </tr>
+              <tr>
+                <td width="50%"><h5>Domain 1: sale of products</h5></td>
+                <td width="50%"><h5>Domains 2: game of hit the target</h5></td>
+              </tr>
+              <tr>
+                <td><a href="images/study4codigoDomain1.png" target="_blank">Program 1 and Program 2</a></td>
+                <td><a href="images/study4codigoDomain2.png" target="_blank">Program 3 and Program 4</a></td>
+              </tr>
+            </table></td>
+          </tr>
+
+          </table></td>
+
+      </tr>
+
+    </table></td>
+
+    <td width="15%" bgcolor="#CCCCCC">&nbsp;</td>
+
+  </tr>
+
+</table>
+
+</body>
+
+</html>
+
